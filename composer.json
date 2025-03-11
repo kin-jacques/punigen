@@ -1,0 +1,72 @@
+{
+    "name": "kin-jacques/punigen",
+    "description": "A Symfony MakerBundle extension to automatically generate test files for PHP classes, streamlining the testing process.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "keywords": ["symfony", "bundle", "tests", "PHP", "MakerBundle"],
+    "homepage": "https://github.com/kin-jacques/punigen",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kin-jacques/punigen.git"
+    },
+    "support": {
+        "issues": "https://github.com/kin-jacques/punigen/issues",
+        "source": "https://github.com/kin-jacques/punigen"
+    },
+    "require": {
+        "php": ">=8.0",
+        "nikic/php-parser": "^5.4",
+        "symfony/console": "^6.0",
+        "symfony/finder": "^6.0",
+        "symfony/flex": "^2.4",
+        "symfony/process": "^6.0",
+        "symfony/runtime": "^6.0",
+        "symfony/yaml": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "symfony/maker-bundle": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\": "src/",
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        }
+    },
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Kinton JACQUES",
+            "email": "kinton007jacques@gmail.com"
+        }
+    ],
+    "bin": [
+        "bin/punigen"
+    ],
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "test": "phpunit",
+        "lint": "phpcs"
+    }
+}
