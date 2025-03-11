@@ -1,4 +1,6 @@
 {
+    "version": "0.1.0",
+    "minimum-stability": "stable",
     "name": "kin-jacques/punigen",
     "description": "A Symfony MakerBundle extension to automatically generate test files for PHP classes, streamlining the testing process.",
     "type": "symfony-bundle",
